@@ -50,7 +50,7 @@
         combo_accent {
             timeout-ms = <300>;
             key-positions = <32 33>;
-            bindings = <&mo 0>;
+            bindings = <&mo 1>;
         };
 
         // internal-left & external-right thumb keys
@@ -58,7 +58,7 @@
         combo_sym2 {
             timeout-ms = <200>;
             key-positions = <31 33>;
-            bindings = <&mo 0>;
+            bindings = <&mo 1>;
         };
 
         // both left thumb keys
@@ -66,7 +66,7 @@
         combo_settings {
             timeout-ms = <300>;
             key-positions = <30 31>;
-            bindings = <&mo 0>;
+            bindings = <&mo 1>;
         };
     };
 
@@ -89,6 +89,15 @@
 
         // Base alpha layer
 
+        default_layer {
+            bindings = <
+&kp Q        &kp W        &kp E         &kp R         &kp T              &kp Y        &kp U         &kp I         &kp O        &kp P
+&hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F  &kp G              &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SINGLE_QUOTE
+&kp Z        &kp X        &kp C         &kp V         &kp B              &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH
+                                        &lt 3 ESCAPE  &lt 4 BACKSPACE    &lt 1 SPACE  &lt 2 ENTER
+            >;
+        };
+
         sym_layer {
             bindings = <
 &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp ASTERISK  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &trans  &trans  &trans  &trans  &trans
@@ -109,10 +118,10 @@
 
         nav_layer {
             bindings = <
-&trans  &trans  &trans  &mmv MOVE_VERT -200  &mmv MOVE_VERT 200    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&trans  &trans  &trans  &trans               &trans                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp TAB
-&trans  &trans  &trans  &trans               &trans                &mkp MCLK       &trans          &trans        &trans           &kp CAPSLOCK
-                        &none                &none                 &mkp LCLK       &mkp RCLK
+&trans  &trans  &trans  &mmv MOVE_VERT  &mmv MOVE_VERT 200    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&trans  &trans  &trans  &trans          &trans                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp TAB
+&trans  &trans  &trans  &trans          &trans                &mkp MCLK       &trans          &trans        &trans           &kp CAPSLOCK
+                        &none           &none                 &mkp LCLK       &mkp RCLK
             >;
         };
 
