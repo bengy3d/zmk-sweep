@@ -29,8 +29,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
     };
@@ -62,7 +62,7 @@
             bindings = <
 &kp LEFT_BRACKET  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp RIGHT_BRACKET    &trans  &trans  &trans  &trans  &trans
 &kp SEMICOLON     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL            &trans  &trans  &trans  &trans  &trans
-&kp COLON         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &trans  &trans  &trans  &trans  &trans
+&kp GRAVE         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH        &trans  &trans  &trans  &trans  &trans
                                               &kp NUMBER_0  &kp MINUS            &none   &none
             >;
         };
