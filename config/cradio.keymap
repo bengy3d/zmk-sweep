@@ -32,8 +32,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
-            global-quick-tap;
-            hold-trigger-on-release;
         };
     };
 
