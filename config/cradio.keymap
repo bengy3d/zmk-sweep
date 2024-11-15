@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
 #include "mouse.dtsi"
+#include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 // Layer definitions
 
@@ -35,6 +35,7 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <0>;
         };
+
         thumb: thumb {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -52,9 +53,9 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W        &kp E         &kp R         &kp T              &kp Y        &kp U         &kp I         &kp O        &kp P
-&hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F  &kp G              &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SINGLE_QUOTE
-&kp Z        &kp X        &kp C         &kp V         &kp B              &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH
+&kp Q        &kp W        &kp E         &kp R            &kp T                 &kp Y           &kp U           &kp I         &kp O        &kp P
+&hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F     &kp G                 &kp H           &hrm RSHFT J    &hrm RCTRL K  &hrm RALT L  &hrm RGUI SINGLE_QUOTE
+&kp Z        &kp X        &kp C         &kp V            &kp B                 &kp N           &kp M           &kp COMMA     &kp DOT      &kp FSLH
                                         &thumb 3 ESCAPE  &thumb 4 BACKSPACE    &thumb 1 SPACE  &thumb 2 ENTER
             >;
         };
@@ -79,10 +80,10 @@
 
         nav_layer {
             bindings = <
-&none             &none           &none       &msc SCROLL_DOWN     &msc SCROLL_UP        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp DELETE
-&kp LGUI          &kp LALT        &kp LCTRL   &kp LSHFT            &none                 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp TAB
-&kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &kp C_VOLUME_DOWN    &kp C_VOLUME_UP       &mkp MCLK       &kp PAGE_DOWN   &kp PAGE_UP   &none            &kp CAPSLOCK
-                                              &none                &none                 &mkp RCLK       &mkp LCLK
+&mkp MB4          &mkp MB5        &none       &msc SCROLL_DOWN   &msc SCROLL_UP     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp DELETE
+&kp LGUI          &kp LALT        &kp LCTRL   &kp LSHFT          &none              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp TAB
+&kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &mkp MCLK       &kp PAGE_DOWN   &kp PAGE_UP   &none            &kp CAPSLOCK
+                                              &none              &none              &mkp RCLK       &mkp LCLK
             >;
         };
 
