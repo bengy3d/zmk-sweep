@@ -31,8 +31,17 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <300>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = 0;
+        };
+        thumb: thumb {
+            compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <300>; // enable repeat
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
         };
     };
 
@@ -46,7 +55,7 @@
 &kp Q        &kp W        &kp E         &kp R         &kp T              &kp Y        &kp U         &kp I         &kp O        &kp P
 &hrm LGUI A  &hrm LALT S  &hrm LCTRL D  &hrm LSHFT F  &kp G              &kp H        &hrm RSHFT J  &hrm RCTRL K  &hrm RALT L  &hrm RGUI SINGLE_QUOTE
 &kp Z        &kp X        &kp C         &kp V         &kp B              &kp N        &kp M         &kp COMMA     &kp DOT      &kp FSLH
-                                        &lt 3 ESCAPE  &lt 4 BACKSPACE    &lt 1 SPACE  &lt 2 ENTER
+                                        &thumb 3 ESCAPE  &thumb 4 BACKSPACE    &thumb 1 SPACE  &thumb 2 ENTER
             >;
         };
 
