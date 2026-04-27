@@ -1,17 +1,17 @@
 // Set speed values before pointing.h expands them into MOVE_UP etc.
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 #include <dt-bindings/zmk/pointing.h>
 
 &mmv {
-  acceleration-exponent = <0>;
-  time-to-max-speed-ms = <0>;
+  acceleration-exponent = <1>;
+  time-to-max-speed-ms = <350>;
   delay-ms = <0>;
 };
 
 &msc {
-  acceleration-exponent = <0>;
-  time-to-max-speed-ms = <0>;
+  acceleration-exponent = <1>;
+  time-to-max-speed-ms = <2000>;
   delay-ms = <0>;
 };
