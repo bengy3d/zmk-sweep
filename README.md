@@ -5,7 +5,7 @@ Miryoku-inspired ZMK firmware configuration for the Sweep keyboard with native m
 ## Features
 
 - **Home Row Modifiers**: Optimized timing (170ms tap, 300ms quick-tap) for comfortable typing
-- **Native Mouse Support**: Full mouse movement and scrolling with acceleration via urob's ZMK fork
+- **Native Mouse Support**: Full mouse movement and scrolling with acceleration
 - **6 Functional Layers**: Base, Symbols, Numbers, Navigation/Mouse, Function keys, and System settings
 - **Multi-Device Bluetooth**: Support for up to 5 paired devices with quick switching
 - **Low Latency**: Aggressive debouncing (1ms press, 5ms release) for responsive input
@@ -141,8 +141,8 @@ Legend:
 ## Mouse Configuration
 
 Native mouse support with custom acceleration:
-- **Movement**: Acceleration exponent 2, max speed 750ms, sensitivity 1600
-- **Scrolling**: Acceleration exponent 1, max speed 5000ms, sensitivity 100
+- **Movement**: Acceleration exponent 1, ramp to max 350ms, sensitivity 1800
+- **Scrolling**: Acceleration exponent 1, ramp to max 2000ms, sensitivity 100
 - **Buttons**: Left, right, middle, back (MB4), forward (MB5)
 
 Mouse controls accessible on navigation layer (Layer 3).
@@ -190,9 +190,8 @@ Firmware is automatically built via GitHub Actions on every commit.
 
 ### ZMK Configuration
 
-- **Fork**: urob's ZMK with native mouse support
-- **Branch**: `main-with-native-mouse`
-- **Repository**: https://github.com/urob
+- **Source**: Official ZMK firmware (`zmkfirmware/zmk`)
+- **Native mouse/pointing device support is built into ZMK**
 
 ## Build Targets
 
